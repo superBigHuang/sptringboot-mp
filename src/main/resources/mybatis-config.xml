@@ -6,4 +6,18 @@
 <!--    <plugins>-->
 <!--        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></plugin>-->
 <!--    </plugins>-->
+    <plugins>
+        <!--性能分析插件-->
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor">
+            <!--最大执行时间，单位为毫秒-->
+            <property name="maxTime" value="100"/>
+            <!--对输出的SQL的格式化-->
+            <property name="format" value="true"/>
+        </plugin>
+
+        <!--乐观锁-->
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor">
+
+        </plugin>
+    </plugins>
 </configuration>

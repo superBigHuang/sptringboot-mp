@@ -1,9 +1,6 @@
 package cn.itcast.mp.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,4 +26,7 @@ public class User extends Model<User> {
     // 对象中的属性字段在表中不存在
     @TableField(exist = false)
     private String address;
+
+    @Version // 乐观锁的版本字段
+    private Integer version;
 }

@@ -59,4 +59,14 @@ public class TestUserMapper2 {
         System.out.println("update = " + update);
 
     }
+
+    @Test
+    public void testUpdateVersion() {
+        User user = new User();
+        user.setId(2L); // 查询条件
+        user.setAge(23);
+        user.setVersion(1); // 当前的版本信息
+        boolean b = user.updateById();
+        System.out.println(user);
+    }
 }

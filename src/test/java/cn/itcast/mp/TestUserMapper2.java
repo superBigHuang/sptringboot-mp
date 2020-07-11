@@ -69,4 +69,6 @@ public class TestUserMapper2 {
         boolean b = user.updateById();
         System.out.println(user);
     }
+
+
 }

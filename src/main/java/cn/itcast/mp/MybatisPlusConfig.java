@@ -1,5 +1,6 @@
 package cn.itcast.mp;
 
+import cn.itcast.mp.injectors.MySqlInjector;
 import cn.itcast.mp.plugins.MyInterceptor;
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
 import com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser;
@@ -32,11 +33,17 @@ public class MybatisPlusConfig {
 
     //
     @Bean
-    public SqlExplainInterceptor sqlExplainInterceptor(){
+    public SqlExplainInterceptor sqlExplainInterceptor() {
         SqlExplainInterceptor sqlExplainInterceptor = new SqlExplainInterceptor();
         List<ISqlParser> list = new ArrayList();
         list.add(new BlockAttackSqlParser()); // 全表更新或者删除的阻断器
         sqlExplainInterceptor.setSqlParserList(list);
         return sqlExplainInterceptor;
+    }
+
+    // 注入自定义的sql注入器
+    @Bean
+    public MySqlInjector mySqlInjector() {
+        return new MySqlInjector();
     }
 }

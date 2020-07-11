@@ -39,7 +39,7 @@ public class TestUserMapper {
 
     @Test
     public void selectById() {
-        User user = this.userMapper.selectById(1L);
+        User user = this.userMapper.selectById(2L);
         System.out.println("user = " + user);
     }
 
@@ -76,7 +76,7 @@ public class TestUserMapper {
 
     @Test
     public void deleteById() {
-        int i = this.userMapper.deleteById(7L);
+        int i = this.userMapper.deleteById(2L);
         System.out.println("i = " + i);
     }
 

@@ -31,4 +31,7 @@ public class User extends Model<User> {
 
     @Version // 乐观锁的版本字段
     private Integer version;
+
+    @TableLogic // 逻辑山吹状态 1-删除 2-未删除
+    private Integer deleted;
 }

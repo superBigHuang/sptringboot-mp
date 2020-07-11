@@ -1,6 +1,5 @@
 package cn.itcast.mp;
 
-import cn.itcast.mp.emuns.SexEnum;
 import cn.itcast.mp.mapper.UserMapper;
 import cn.itcast.mp.pojo.User;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -27,12 +26,10 @@ public class TestUserMapper {
         User user = new User();
         user.setMail("8410111@qq.com");
         user.setAge(123);
-        user.setName("貂蝉");
+        user.setName("诸葛亮");
         user.setPassword("8888888");
-        user.setUserName("diaochan");
+        user.setUserName("zhugeliang");
         user.setAddress("唐人街");
-        user.setVersion(1);
-        user.setSex(SexEnum.WOMAN);
         // result 数据库受影响的行数
         int result = this.userMapper.insert(user);
         System.out.println("result = " + result);
@@ -42,7 +39,7 @@ public class TestUserMapper {
 
     @Test
     public void selectById() {
-        User user = this.userMapper.selectById(18L);
+        User user = this.userMapper.selectById(2L);
         System.out.println("user = " + user);
     }
 

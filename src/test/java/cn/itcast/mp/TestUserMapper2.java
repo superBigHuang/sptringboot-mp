@@ -37,7 +37,7 @@ public class TestUserMapper2 {
         User user = new User();
         user.setId(13L); // 查询条件
         user.setUserName("liubei");
-        user.setAge(800);
+        user.setAge(567);
         boolean b = user.updateById();
         System.out.println(user);
     }
@@ -48,15 +48,5 @@ public class TestUserMapper2 {
         user.setId(15L);
         boolean b = user.deleteById();
         System.out.println("b = " + b);
-    }
-
-    // 测试全表更新，sql分析器的阻断效果
-    @Test
-    public void testUpdateAll() {
-        User user = new User();
-        user.setAge(233);
-        boolean update = user.update(null);
-        System.out.println("update = " + update);
-
     }
 }

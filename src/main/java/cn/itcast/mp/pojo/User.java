@@ -15,6 +15,8 @@ public class User extends Model<User> {
 //    @TableId(type = IdType.AUTO)
     private Long id;
     private String userName;
+    // 插入数据时进行填充
+    @TableField(fill = FieldFill.INSERT)
     private String password;
     private String name;
     private Integer age;

@@ -25,10 +25,10 @@ public class TestUserMapper {
     public void testInsert() {
         User user = new User();
         user.setMail("8410111@qq.com");
-        user.setAge(23);
-        user.setName("曹操2");
-        user.setPassword("123456");
-        user.setUserName("test2");
+        user.setAge(123);
+        user.setName("诸葛亮");
+        user.setPassword("8888888");
+        user.setUserName("zhugeliang");
         user.setAddress("唐人街");
         // result 数据库受影响的行数
         int result = this.userMapper.insert(user);

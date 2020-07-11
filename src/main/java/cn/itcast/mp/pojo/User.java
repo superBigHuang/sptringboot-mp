@@ -1,5 +1,6 @@
 package cn.itcast.mp.pojo;
 
+import cn.itcast.mp.emuns.SexEnum;
 import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.AllArgsConstructor;
@@ -34,4 +35,7 @@ public class User extends Model<User> {
 
     @TableLogic // 逻辑山吹状态 1-删除 2-未删除
     private Integer deleted;
+
+    // 性别 枚举类型
+    private SexEnum sex;
 }
